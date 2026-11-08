@@ -21,6 +21,16 @@ The source dataset is static historical data. Incremental ingestion is simulated
 
 ## Architecture
 ![E-Commerce Data Engineering Pipeline Architecture](docs/architecture.png)
+### Airflow Orchestration
+
+The pipeline is orchestrated using Apache Airflow with four sequential tasks:
+
+1. Create Incremental Batch
+2. Incremental Orders Silver
+3. Incremental Fact Order Item Gold
+4. Incremental Sales Daily Gold
+
+![Airflow DAG Successful Run](docs/airflow_dag_success.png)
 ```text
 Olist CSV Dataset
        |
