@@ -1,0 +1,40 @@
+# Python
+venv/
+airflow_venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+*.env
+
+# Raw and generated data
+data/raw/
+data/processed/
+data/incremental/
+data/audit/
+
+# Logs
+*.log
+logs/
+
+# Spark
+.sparkStaging/
+
+# Airflow
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+airflow-scheduler.pid
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated data quality reports
+data/quality/
