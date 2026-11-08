@@ -21,7 +21,7 @@ The source dataset is static historical data. Incremental ingestion is simulated
 
 ## Architecture
 ![E-Commerce Data Engineering Pipeline Architecture](docs/architecture.png)
-### Airflow Orchestration
+## Airflow Orchestration
 
 The pipeline is orchestrated using Apache Airflow with four sequential tasks:
 
@@ -31,6 +31,35 @@ The pipeline is orchestrated using Apache Airflow with four sequential tasks:
 4. Incremental Sales Daily Gold
 
 ![Airflow DAG Successful Run](docs/airflow_dag_success.png)
+
+## Data Quality
+
+The pipeline includes configuration-driven data quality validation covering:
+
+- Row-count validation
+- Required-column validation
+- Primary-key null checks
+- Primary-key uniqueness
+- Business-rule validation
+- Referential integrity
+- Incremental batch validation
+- Audit logging
+
+Latest validation run:
+
+| Dataset | Rows | Status |
+|---|---:|---|
+| orders | 99,441 | PASS |
+| customers | 99,441 | PASS |
+| order_items | 112,650 | PASS |
+| products | 32,951 | PASS |
+| sellers | 3,095 | PASS |
+| payments | 103,886 | PASS |
+| reviews | 99,224 | PASS |
+| fact_order_item_final | 112,650 | PASS |
+
+**Overall Status: PASSED**
+
 ```text
 Olist CSV Dataset
        |
