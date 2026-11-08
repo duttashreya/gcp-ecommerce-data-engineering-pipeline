@@ -20,7 +20,7 @@ This project demonstrates a production-style e-commerce data pipeline using:
 The source dataset is static historical data. Incremental ingestion is simulated by partitioning historical orders by `order_purchase_date`.
 
 ## Architecture
-
+![E-Commerce Data Engineering Pipeline Architecture](docs/architecture.png)
 ```text
 Olist CSV Dataset
        |
